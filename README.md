@@ -22,16 +22,17 @@ npm install ushur --save
 ### Usage
 
 #### Authenticate
-First thing you need to do is login to the API using either event style or promise style
-The URL itself is configured under lib/config
-The login shown below is under examples/auth.js
-
+First thing you need to do is login to the API using either event style or promise style.
+The URL itself is configured under lib/config.
+The login shown below is under examples/auth.js.
+To use specific URL/host use hostname field as shown below:
 ```
 var Ushur = require('ushur').Ushur;
 
 var ushur = new Ushur({
   email: "user@example.com",
-  password: "examplePassword"
+  password: "examplePassword",
+  hostname: "https://vathsadev.ushur.me/" //optional
 });
 
 ushur.on('loginSuccess', function (userData) {
@@ -48,7 +49,9 @@ var Ushur = require('ushur').Ushur;
 
 var ushur = new Ushur({
   email: "user@example.com",
-  password: "examplePassword"
+  password: "examplePassword",
+  mode: "promise",
+  hostname: "https://vathsadev.ushur.me/" //optional
  })
  .then(function(userData){
    //Login Success
