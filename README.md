@@ -32,7 +32,7 @@ var Ushur = require('ushur').Ushur;
 var ushur = new Ushur({
   email: "user@example.com",
   password: "examplePassword",
-  hostname: "https://vathsadev.ushur.me/" //optional
+  hostname: "https://apidev.ushur.me/" //optional
 });
 
 ushur.on('loginSuccess', function (userData) {
@@ -51,7 +51,7 @@ var ushur = new Ushur({
   email: "user@example.com",
   password: "examplePassword",
   mode: "promise",
-  hostname: "https://vathsadev.ushur.me/" //optional
+  hostname: "https://apidev.ushur.me/" //optional
  })
  .then(function(userData){
    //Login Success
